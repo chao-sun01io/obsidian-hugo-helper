@@ -106,3 +106,7 @@ its old bundle for you to remove by hand.
 ```sh
 uv run pytest
 ```
+
+## License
+
+[MIT](LICENSE) © 2026 Chao Sun
