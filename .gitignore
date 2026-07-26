@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# uv virtual environment
+.venv/
+
+# Personal config with local paths (commit the .example.yaml instead)
+obsidian-hugo-helper.yaml

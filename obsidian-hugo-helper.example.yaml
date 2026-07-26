@@ -1,0 +1,19 @@
+# Example config for obsidian-hugo-helper.
+# Copy to obsidian-hugo-helper.yaml and edit, or pass with --config PATH.
+
+# Directory scanned for notes flagged with `publish_to.hugo` in their frontmatter.
+source_vault: /path/to/Vault
+
+# Hugo content root that published leaf bundles are written into.
+target_content: /path/to/site/content
+
+# Name of the per-note-root folder where attachments (images) live in the vault.
+assets_dir: assets
+
+frontmatter:
+  # Missing an essential field -> the note is skipped with a warning.
+  essential: [title, date]
+  # Kept if present, omitted if absent.
+  optional: [tags, draft, description]
+  # Any frontmatter key not listed above (and the entire publish_to block)
+  # is stripped from the published note.
