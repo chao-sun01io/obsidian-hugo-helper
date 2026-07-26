@@ -6,6 +6,26 @@ A personal tool: it scans one vault, publishes only the notes you mark, and writ
 each as a Hugo leaf bundle. Note bodies pass through as-is — v1 does no Markdown
 format conversion (see [`.scratch/v1/spec.md`](.scratch/v1/spec.md) for scope).
 
+## Philosophy
+
+**Write everything in Obsidian; export a chosen few to Hugo.**
+
+Your vault is the single place you think and write — drafts, private notes, and
+finished pieces all live together. The blog is not a separate writing environment;
+it is a *published subset* of the vault. You do the work of writing where it's
+comfortable, and mark a note for the world only when it's ready.
+
+That shapes every design choice here:
+
+- **Opt-in publishing.** Nothing leaves the vault unless you add `publish_to.hugo`.
+  The default state of any note is unpublished, so the vault stays your private
+  workspace by default.
+- **The vault is the source of truth.** Hugo content is a derived artifact — you
+  edit in Obsidian and re-export, never the other way around. Runs are idempotent
+  overwrites for exactly this reason.
+- **Author once, in plain Markdown.** The tool moves and trims; it doesn't rewrite
+  your prose. What you wrote is what gets published.
+
 ## Install
 
 ```sh
